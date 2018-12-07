@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p> Event handlers using classic method </p>
+<button id="myButton" onclick="alert('classic Button handlers');">
+    classic Button
+</button>
+<br>
+<p>Registering event handlers using addEventListener method</p>
+<button id="myButton1">Button</button>
+</body>
+<script>
+    var btn = document.getElementById('myButton1');
+    function bgChange() {
+        alert('using event addEventListener');
+    }   
+    btn.addEventListener('click', bgChange);
+</script>
+</html>

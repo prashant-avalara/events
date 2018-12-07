@@ -1,0 +1,31 @@
+<html>
+
+<body>
+<p>Stop Propagation</p>
+
+<div id="div_outer" style="height: 340px; width: 200px; background-color: pink; padding: 10px;">
+Div 1
+    <div id="div_inner1" style="height: 140px; width: 140px; background-color: yellow; padding: 10px;">
+        Div 2
+        <div id="div_inner2" style="height: 140px; width: 140px; background-color: green; padding: 10px;">
+            Div 3
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+window.document.querySelector("#div_outer").addEventListener("click", function(e) {
+    alert("Div 1");
+    e.stopPropagation();
+}, true);
+
+window.document.querySelector("#div_inner1").addEventListener("click", function(e) {
+    alert(" Inner Div 2");
+}, false);
+
+window.document.querySelector("#div_inner2").addEventListener("click", function(e) {
+    alert("Inner Div 3");
+}, true);
+</script>
+</html>
